@@ -2,10 +2,10 @@
   <v-layout>
     <v-flex text-xs-left>
        <v-btn color="primary" flat nuxt to="/">Back</v-btn>
-      <h1>{{blog.title}}</h1><br>
+      <h1>{{title}}</h1><br>
       <div>
       <img
-        :src="`${blog.image}`"
+        :src="`${image}`"
         alt="Fitness_quotes"
         class="mb-5"
       >
@@ -25,9 +25,9 @@ export default {
             }
         })
       .then(res => {
-        return {title : res.data.blogs.title, body: res.data.blogs.content, image:res.data.blogs.metadata.image.url}
+        return {title : res.data.objects[0].title, body: res.data.objects[0].content, image:res.data.objects[0].metadata.image.url}
       });
   }
 };
-
+        
 </script>
