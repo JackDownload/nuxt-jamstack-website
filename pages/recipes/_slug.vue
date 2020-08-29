@@ -2,7 +2,6 @@
   <v-layout>
     <v-flex text-xs-left>
        <v-btn color="primary" flat nuxt to="/">Back</v-btn>
-      <h1>{{title}}</h1><br>
        <h1>{{description}}</h1><br>
       <div>
       <img
@@ -26,7 +25,7 @@ export default {
             }
         })
       .then(res => {
-        return {title : res.data.objects[0].title, body: res.data.objects[0].content, image:res.data.objects[0].metadata.image.url, description: res.data.objects[0].description,}
+        return {title : res.data.objects[0].title, body: res.data.objects[0].content, image:res.data.objects[0].metadata.image.url, description : res.data.objects[0].metadata.description}
       });
   }
 };

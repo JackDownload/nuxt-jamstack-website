@@ -3,7 +3,7 @@
     <v-flex text-xs-left>
        <v-btn color="primary" flat nuxt to="/">Back</v-btn>
             <li v-for="recipe of recipes" :key="recipe.id">
-        <n-link :to="`/recipes/${recipe.slug}`">{{ recipe.title }} ; {{ recipe.description }}c</n-link>
+        <n-link :to="`/recipes/${recipe.slug}`">{{ recipe.title }} ; {{ description }} </n-link>
       </li>
     </v-flex>
   </v-layout>
@@ -22,7 +22,7 @@ export default {
             }
         })
       .then(res => {
-        return {recipes : res.data.objects}
+        return {recipes : res.data.objects, description : res.data.objects[0].metadata.description}
       });
   }
 };
