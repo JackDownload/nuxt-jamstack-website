@@ -3,7 +3,7 @@
     <v-flex text-xs-left>
        <v-btn color="primary" flat nuxt to="/">Back</v-btn>
             <li v-for="recipe of recipes" :key="recipe.id">
-        <n-link :to="`/recipes/${recipe.slug}`">{{ recipe.title }} ; {{ recipe.title }}</n-link>
+        <n-link :to="`/recipes/${recipe.slug}`">{{ recipe.title }} ; {{ recipe.description }}c</n-link>
       </li>
     </v-flex>
   </v-layout>
