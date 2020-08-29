@@ -75,6 +75,11 @@ export default {
           icon: 'bubble_chart',
           title: 'Blog',
           to: '/blog'
+        },
+                {
+          icon: 'bubble_chart',
+          title: 'Blogs',
+          to: '/blogs'
         }
       ],
       miniVariant: false,
