@@ -80,6 +80,11 @@ export default {
           icon: 'bubble_chart',
           title: 'Blogs',
           to: '/blogs'
+        },
+                {
+          icon: 'bubble_chart',
+          title: 'Recipes',
+          to: '/recipes'
         }
       ],
       miniVariant: false,
